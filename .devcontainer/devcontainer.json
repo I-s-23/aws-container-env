@@ -1,0 +1,65 @@
+{
+	"name": "aws_env_docker_on_docker",
+	"dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.yml"
+  ],
+	"service": "develop",
+  "workspaceFolder": "/workspace",
+	"settings": {
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 2,
+    "editor.autoIndent": "full",
+    "files.autoGuessEncoding": true,
+		"terminal.integrated.shell.linux": "/bin/bash",
+    "yaml.customTags": [
+      "!And",
+      "!And sequence",
+      "!If",
+      "!If sequence",
+      "!Not",
+      "!Not sequence",
+      "!Equals",
+      "!Equals sequence",
+      "!Or",
+      "!Or sequence",
+      "!FindInMap",
+      "!FindInMap sequence",
+      "!Base64",
+      "!Join",
+      "!Join sequence",
+      "!Cidr",
+      "!Ref",
+      "!Sub",
+      "!Sub sequence",
+      "!GetAtt",
+      "!GetAZs",
+      "!ImportValue",
+      "!ImportValue sequence",
+      "!Select",
+      "!Select sequence",
+      "!Split",
+      "!Split sequence",
+    ],
+    "yaml.format.enable": true,
+    "yaml.schemas": {
+      // AWS CloudFormation Resource Specification of Asia Pacific (Tokyo).
+      // https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html
+      "https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json": [
+        "*.cfn.yaml",
+        "*.cf.yml"
+      ]
+		},
+    "yaml.trace.server": "verbose"
+  },
+  "extensions": [
+		"MS-CEINTL.vscode-language-pack-ja",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"kddejong.vscode-cfn-lint",
+		"aws-scripting-guy.cform",
+		"ms-azuretools.vscode-docker"
+	],
+}
